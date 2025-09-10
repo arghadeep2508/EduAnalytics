@@ -1,10 +1,9 @@
-cat > jsconfig.json << 'EOF'
 {
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["*"],
+      "@/app/*": ["app/web/app/*"]
     }
   }
 }
-EOF
