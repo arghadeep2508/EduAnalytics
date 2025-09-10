@@ -5,6 +5,7 @@ const NullishQueryFunction = () => {
     'No database connection string was provided to `neon()`. Set process.env.DATABASE_URL'
   );
 };
+
 NullishQueryFunction.transaction = () => {
   throw new Error(
     'No database connection string was provided to `neon()`. Set process.env.DATABASE_URL'
