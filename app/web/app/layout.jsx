@@ -1,4 +1,4 @@
-// app/web/app/layout.jsx  (Server Component)
+// app/web/app/layout.jsx
 import ReactQueryProvider from './ReactQueryProvider';
 
 export const metadata = {
@@ -6,14 +6,6 @@ export const metadata = {
   description: 'Student analytics dashboard',
 };
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-        <ReactQueryProvider>
-          {children}
-        </ReactQueryProvider>
-      </body>
-    </html>
-  );
+export default function WebAppLayout({ children }) {
+  return <ReactQueryProvider>{children}</ReactQueryProvider>;
 }
