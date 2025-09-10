@@ -1,6 +1,5 @@
 // re-export shim so old imports keep working
 export * from '../../utils/sql.js';
-export { default } from '../../utils/sql.js';
 
 import { neon } from '@neondatabase/serverless';
 
