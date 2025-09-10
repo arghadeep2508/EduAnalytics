@@ -1,17 +1,13 @@
-// re-export shim so old imports keep working
-export * from '../../utils/sql.js';
-
 import { neon } from '@neondatabase/serverless';
 
 const NullishQueryFunction = () => {
   throw new Error(
-    'No database connection string was provided to `neon()`. Perhaps process.env.DATABASE_URL has not been set'
+    'No database connection string was provided to `neon()`. Set process.env.DATABASE_URL'
   );
 };
-
 NullishQueryFunction.transaction = () => {
   throw new Error(
-    'No database connection string was provided to `neon()`. Perhaps process.env.DATABASE_URL has not been set'
+    'No database connection string was provided to `neon()`. Set process.env.DATABASE_URL'
   );
 };
 
